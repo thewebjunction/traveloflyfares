@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --void: #011C27;
+    --abyss: #042F3E;
+    --sandstone: #D9A66C;
+    --cyan: #00D4AA;
+    --ice: #E8F4F8;
+    --mist: #94B8C4;
+    --luminescence: rgba(0, 212, 170, 0.08);
+
+    --background: 197 96% 8%;
+    --foreground: 195 60% 94%;
+    --card: 197 87% 13%;
+    --card-foreground: 195 60% 94%;
+    --popover: 197 87% 13%;
+    --popover-foreground: 195 60% 94%;
+    --primary: 33 56% 63%;
+    --primary-foreground: 197 96% 8%;
+    --secondary: 197 87% 13%;
+    --secondary-foreground: 195 60% 94%;
+    --muted: 197 87% 13%;
+    --muted-foreground: 195 25% 67%;
+    --accent: 164 100% 42%;
+    --accent-foreground: 197 96% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 25% 67%;
+    --input: 195 25% 67%;
+    --ring: 164 100% 42%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--void);
+    color: var(--ice);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  input, textarea, select {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+  }
+
+  .section-padding {
+    @apply py-[60px] md:py-[80px] lg:py-[120px] px-4 sm:px-6 lg:px-10;
+  }
+
+  .content-max {
+    @apply max-w-[1280px] mx-auto;
+  }
+
+  .pill-primary {
+    @apply rounded-full px-6 py-3 font-semibold transition-all duration-300;
+    background-color: var(--sandstone);
+    color: var(--void);
+  }
+
+  .pill-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(217, 166, 108, 0.25);
+  }
+
+  .pill-secondary {
+    @apply rounded-full px-6 py-3 font-semibold transition-all duration-300;
+    background-color: transparent;
+    border: 1px solid var(--ice);
+    color: var(--ice);
+  }
+
+  .pill-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+
+  .card-abyss {
+    background-color: var(--abyss);
+    border-radius: 24px;
+  }
+
+  .text-ice {
+    color: var(--ice);
+  }
+
+  .text-mist {
+    color: var(--mist);
+  }
+
+  .text-sandstone {
+    color: var(--sandstone);
+  }
+
+  .text-cyan {
+    color: var(--cyan);
+  }
+
+  .bg-void {
+    background-color: var(--void);
+  }
+
+  .bg-abyss {
+    background-color: var(--abyss);
+  }
+
+  .bg-sandstone {
+    background-color: var(--sandstone);
+  }
+
+  .bg-cyan {
+    background-color: var(--cyan);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
