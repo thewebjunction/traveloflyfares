@@ -16,7 +16,7 @@ export default function AnnouncementBar() {
     >
       <span>
         Speak to our travel expert:{' '}
-        <strong>+1 (888) 725-2195</strong>
+        <strong>+1 (833) 701-0952</strong>
       </span>
       <button
         onClick={() => setVisible(false)}

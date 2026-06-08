@@ -80,11 +80,11 @@ export default function HeroSection() {
           style={{ opacity: 0, transform: 'translateY(30px)' }}
         >
           <a
-            href="tel:+18887252195"
+            href="tel:+18337010952"
             className="hidden sm:inline-flex pill-primary items-center gap-2 text-base"
           >
             <Phone size={18} />
-            +1 (888) 725-2195
+            +1 (833) 701-0952
           </a>
           <a
             href="#deals"

@@ -109,8 +109,8 @@ export default function Footer() {
             <a href="#" className="flex items-center gap-2 text-sm" style={{ color: '#94B8C4' }}>
               <MapPin size={16} /> 915 MAIN ST, 805, HARTFORD, CT, 06103, United States
             </a>
-            <a href="tel:+18887252195" className="flex items-center gap-2 text-sm" style={{ color: '#94B8C4' }}>
-              <Phone size={16} /> +1 (888) 725-2195
+            <a href="tel:+18337010952" className="flex items-center gap-2 text-sm" style={{ color: '#94B8C4' }}>
+              <Phone size={16} /> +1 (833) 701-0952
             </a>
             <a href="mailto:support@traveloflyfaresllc.com" className="flex items-center gap-2 text-sm" style={{ color: '#94B8C4' }}>
               <Mail size={16} /> support@traveloflyfaresllc.com

@@ -22,7 +22,7 @@ export default function MobileCallWidget() {
 
       {/* Main popup pill */}
       <a
-        href="tel:+18888070272"
+        href="tel:+18337010952"
         className="flex items-center gap-3 px-3 pt-3 pb-2.5 rounded-xl overflow-hidden shadow-xl active:brightness-95 transition-all"
         style={{ backgroundColor: '#00D4AA' }}
       >
@@ -50,7 +50,7 @@ export default function MobileCallWidget() {
             Grab Your Flight Discount
           </p>
           <p className="text-base font-bold leading-tight truncate" style={{ color: '#011C27' }}>
-            +1 888-807-0272
+            +1 833-701-0952
           </p>
         </div>
 

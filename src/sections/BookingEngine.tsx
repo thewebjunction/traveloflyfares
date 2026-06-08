@@ -23,7 +23,7 @@ export default function BookingEngine() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your inquiry! Our travel experts will contact you shortly at +1 (888) 725-2195.');
+    alert('Thank you for your inquiry! Our travel experts will contact you shortly at +1 (833) 701-0952.');
   };
 
   const inputBaseClass =

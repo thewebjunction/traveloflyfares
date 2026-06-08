@@ -88,7 +88,7 @@ export default function Header() {
         {/* Right Side */}
         <div className="flex items-center gap-3 ml-auto">
           <a
-            href="tel:+18887252195"
+            href="tel:+18337010952"
             className="p-2 rounded-full transition-colors duration-200 hover:scale-110"
             style={{ color: '#94B8C4' }}
             aria-label="Call us"
@@ -96,7 +96,7 @@ export default function Header() {
             <Phone size={18} />
           </a>
           <a
-            href="tel:+18887252195"
+            href="tel:+18337010952"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
             style={{
               backgroundColor: '#D9A66C',

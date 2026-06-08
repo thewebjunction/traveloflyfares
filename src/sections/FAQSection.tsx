@@ -5,7 +5,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const faqs = [
   {
     q: 'How do I book a flight with Travelofly Fares?',
-    a: 'Booking a flight is easy! Simply use our search form above to enter your travel details \u2014 departure city, destination, dates, and number of passengers. Our travel experts will then contact you with the best available options and guide you through the booking process. You can also call us directly at +1 (888) 725-2195 for personalized assistance.',
+    a: 'Booking a flight is easy! Simply use our search form above to enter your travel details \u2014 departure city, destination, dates, and number of passengers. Our travel experts will then contact you with the best available options and guide you through the booking process. You can also call us directly at +1 (833) 701-0952 for personalized assistance.',
   },
   {
     q: 'What is your cancellation policy?',
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Can I make changes to my existing reservation?',
-    a: 'Yes, you can make changes to your reservation. We offer support for date changes, route modifications, passenger name corrections, and other adjustments. Change fees depend on the airline\'s policy. Contact our 24/7 support team at +1 (888) 725-2195 and we\'ll handle the changes for you.',
+    a: 'Yes, you can make changes to your reservation. We offer support for date changes, route modifications, passenger name corrections, and other adjustments. Change fees depend on the airline\'s policy. Contact our 24/7 support team at +1 (833) 701-0952 and we\'ll handle the changes for you.',
   },
   {
     q: 'Are there any hidden fees?',
