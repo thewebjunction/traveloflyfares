@@ -43,7 +43,7 @@ export default function FAQSection() {
         {/* Header */}
         <div className="text-center mb-12 reveal-child">
           <h2
-            className="font-script text-3xl sm:text-4xl md:text-5xl mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl mb-4"
             style={{ color: '#E8F4F8' }}
           >
             Frequently Asked Questions

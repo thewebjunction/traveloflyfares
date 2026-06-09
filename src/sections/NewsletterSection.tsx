@@ -24,7 +24,7 @@ export default function NewsletterSection() {
       <div className="content-max" ref={sectionRef}>
         <div className="reveal-child max-w-[560px] mx-auto text-center">
           <h2
-            className="font-script text-3xl sm:text-4xl md:text-5xl mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl mb-4"
             style={{ color: '#E8F4F8' }}
           >
             Get Exclusive Deals

@@ -13,7 +13,7 @@ export default function MobileCallWidget() {
       <div className="flex justify-start pl-5 mb-[-10px] relative z-10">
         <div
           className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold shadow-md"
-          style={{ backgroundColor: '#011C27', color: '#00D4AA' }}
+          style={{ backgroundColor: '#011C27', color: '#00b8f1' }}
         >
           <Armchair size={13} />
           <span>Best Seats</span>
@@ -24,13 +24,13 @@ export default function MobileCallWidget() {
       <a
         href="tel:+18337010952"
         className="flex items-center gap-3 px-3 pt-3 pb-2.5 rounded-xl overflow-hidden shadow-xl active:brightness-95 transition-all"
-        style={{ backgroundColor: '#00D4AA' }}
+        style={{ backgroundColor: '#00b8f1' }}
       >
         {/* Avatar with online indicator */}
         <div className="relative shrink-0">
           <div
             className="w-9 h-9 rounded-full overflow-hidden border-2"
-            style={{ borderColor: '#011C27' }}
+            style={{ borderColor: '#00b8f1' }}
           >
             <img
               src={agentImg}
@@ -40,16 +40,16 @@ export default function MobileCallWidget() {
           </div>
           <span
             className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border-2"
-            style={{ backgroundColor: '#22c55e', borderColor: '#00D4AA' }}
+            style={{ backgroundColor: '#22c55e', borderColor: '#00b8f1' }}
           />
         </div>
 
         {/* Text */}
         <div className="flex-1 min-w-0 overflow-hidden">
-          <p className="text-xs font-semibold truncate" style={{ color: 'rgba(1,28,39,0.7)' }}>
+          <p className="text-xs font-semibold truncate" style={{ color: 'rgba(0,0,0,0.6)' }}>
             Grab Your Flight Discount
           </p>
-          <p className="text-base font-bold leading-tight truncate" style={{ color: '#011C27' }}>
+          <p className="text-base font-bold leading-tight truncate" style={{ color: '#000000' }}>
             +1 833-701-0952
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function MobileCallWidget() {
         <button
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); setDismissed(true); }}
           className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-opacity active:opacity-60"
-          style={{ backgroundColor: 'rgba(1,28,39,0.18)', color: '#011C27' }}
+          style={{ backgroundColor: 'rgba(0,0,0,0.15)', color: '#000000' }}
           aria-label="Dismiss"
         >
           <X size={11} />

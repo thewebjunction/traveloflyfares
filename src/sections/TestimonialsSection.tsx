@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
       <div className="content-max" ref={sectionRef}>
         {/* Header */}
         <div className="text-center mb-12 reveal-child">
-          <h2 className="font-script text-3xl sm:text-4xl md:text-5xl mb-3" style={{ color: '#E8F4F8' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3" style={{ color: '#E8F4F8' }}>
             Our Happy Travelers
           </h2>
           <p className="text-sm md:text-base" style={{ color: '#94B8C4' }}>

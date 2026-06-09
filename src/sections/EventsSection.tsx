@@ -27,7 +27,7 @@ export default function EventsSection() {
       <div className="content-max" ref={sectionRef}>
         {/* Header */}
         <h2
-          className="reveal-child font-script text-3xl sm:text-4xl md:text-5xl mb-10"
+          className="reveal-child text-2xl sm:text-3xl md:text-4xl mb-10"
           style={{ color: '#E8F4F8' }}
         >
           Special Travel Deals
@@ -69,7 +69,7 @@ export default function EventsSection() {
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <h3
-                className="font-script text-2xl sm:text-3xl md:text-4xl mb-3"
+                className="text-2xl sm:text-3xl md:text-4xl mb-3"
                 style={{ color: '#E8F4F8' }}
               >
                 Summer Sale: Up to 50% Off

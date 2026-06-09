@@ -73,7 +73,7 @@ export default function PackagesSection() {
         {/* Header */}
         <div ref={headerRef} className="flex items-end justify-between mb-10">
           <div className="reveal-child">
-            <h2 className="font-script text-3xl sm:text-4xl md:text-5xl" style={{ color: '#E8F4F8' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl" style={{ color: '#E8F4F8' }}>
               Popular Vacation Packages
             </h2>
             <p className="text-sm mt-2" style={{ color: '#94B8C4' }}>

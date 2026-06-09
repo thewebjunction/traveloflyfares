@@ -38,6 +38,13 @@
     scroll-behavior: smooth;
   }
 
+  h2, h3, h4, h5, h6 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+
   body {
     background-color: var(--void);
     color: var(--ice);
@@ -58,8 +65,10 @@
 
 @layer components {
   .font-script {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 700;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.01em;
   }
 
   .section-padding {
@@ -130,6 +139,15 @@
   .bg-cyan {
     background-color: var(--cyan);
   }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
 }
 
 @layer utilities {
