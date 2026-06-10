@@ -111,7 +111,7 @@ export default function BookingEngine() {
                 <input
                   type="date"
                   placeholder="Journey Date"
-                  className={inputBaseClass + ' pl-10'}
+                  className={inputBaseClass + ' pl-10 min-w-0'}
                   style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })}
                   onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })}
@@ -123,7 +123,7 @@ export default function BookingEngine() {
                   type="date"
                   placeholder="Return Date"
                   disabled={tripType === 'oneway'}
-                  className={inputBaseClass + ' pl-10'}
+                  className={inputBaseClass + ' pl-10 min-w-0'}
                   style={{
                     ...inputStyle,
                     colorScheme: 'dark',
@@ -208,14 +208,14 @@ export default function BookingEngine() {
               </div>
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Check-in" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Check-in" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Check-out" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Check-out" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
               <div className="relative">
@@ -260,7 +260,7 @@ export default function BookingEngine() {
               </div>
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
             </div>
@@ -312,12 +312,12 @@ export default function BookingEngine() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Pick-up Date" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Pick-up Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Drop-off Date" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Drop-off Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
             </div>
@@ -361,7 +361,7 @@ export default function BookingEngine() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
                 <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10'} style={{ ...inputStyle, colorScheme: 'dark' }}
+                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
                   onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
               </div>
               <div className="relative">
@@ -396,12 +396,12 @@ export default function BookingEngine() {
   };
 
   return (
-    <section id="flights" className="relative z-10 px-4 sm:px-6 mt-8 sm:-mt-20 pb-16">
+    <section id="flights" className="relative z-10 px-4 sm:px-6 mt-8 sm:-mt-20 pb-16 overflow-x-hidden">
       <div className="content-max">
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="card-abyss p-6 md:p-10 mx-auto max-w-[1000px]"
+          className="card-abyss p-6 md:p-10 mx-auto max-w-[1000px] overflow-hidden"
           style={{
             border: '1px solid rgba(148,184,196,0.15)',
             boxShadow: '0 8px 48px rgba(0,212,170,0.06)',
