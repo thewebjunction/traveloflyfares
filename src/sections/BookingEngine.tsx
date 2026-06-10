@@ -38,7 +38,7 @@ export default function BookingEngine() {
     boxShadow: '0 0 0 4px rgba(0,212,170,0.15)',
   };
 
-  const TabContent = () => {
+  const renderTabContent = () => {
     switch (activeTab) {
       case 'flights':
         return (
@@ -430,9 +430,7 @@ export default function BookingEngine() {
           </div>
 
           {/* Tab Content */}
-          <div className="transition-opacity duration-300">
-            <TabContent />
-          </div>
+          {renderTabContent()}
         </form>
       </div>
     </section>
