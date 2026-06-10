@@ -17,12 +17,37 @@ export default function HeroSection() {
       .to(statsRef.current, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4');
   }, []);
 
+  // Lock hero height to a fixed pixel value so the mobile address bar
+  // showing/hiding during scroll does NOT resize the hero and reflow the
+  // form below it (the source of the jitter). Only recompute on a real
+  // width change (orientation), never on address-bar height changes.
+  useEffect(() => {
+    const setHeight = () => {
+      document.documentElement.style.setProperty('--hero-h', `${window.innerHeight}px`);
+    };
+    let lastWidth = window.innerWidth;
+    const onResize = () => {
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        setHeight();
+      }
+    };
+    setHeight();
+    window.addEventListener('resize', onResize);
+    window.addEventListener('orientationchange', setHeight);
+    return () => {
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('orientationchange', setHeight);
+    };
+  }, []);
+
   const stats = ['24/7 Support', '500+ Airlines', '1000+ Destinations', 'Best Price Guarantee'];
 
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden"
+      style={{ minHeight: 'var(--hero-h, 100svh)' }}
     >
       {/* Video Background */}
       <video
