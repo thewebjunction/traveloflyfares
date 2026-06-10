@@ -396,7 +396,7 @@ export default function BookingEngine() {
   };
 
   return (
-    <section id="flights" className="relative z-10 px-4 sm:px-6 mt-8 sm:-mt-20 pb-16 overflow-x-hidden">
+    <section id="flights" className="relative z-10 px-4 sm:px-6 mt-8 sm:-mt-20 pb-16">
       <div className="content-max">
         <form
           ref={formRef}
