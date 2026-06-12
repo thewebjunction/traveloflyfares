@@ -29,13 +29,13 @@ export default function BookingEngine() {
   const inputBaseClass =
     'w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200';
   const inputStyle = {
-    backgroundColor: '#042F3E',
-    border: '1px solid rgba(148,184,196,0.2)',
-    color: '#E8F4F8',
+    backgroundColor: '#F0F9FF',
+    border: '1px solid rgba(107,114,128,0.2)',
+    color: '#1F2937',
   };
   const inputFocusStyle = {
-    border: '2px solid #00D4AA',
-    boxShadow: '0 0 0 4px rgba(0,212,170,0.15)',
+    border: '2px solid #0EA5E9',
+    boxShadow: '0 0 0 4px rgba(14,165,233,0.15)',
   };
 
   const renderTabContent = () => {
@@ -50,9 +50,9 @@ export default function BookingEngine() {
                 onClick={() => setTripType('roundtrip')}
                 className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
                 style={{
-                  backgroundColor: tripType === 'roundtrip' ? '#D9A66C' : 'transparent',
-                  color: tripType === 'roundtrip' ? '#011C27' : '#94B8C4',
-                  border: tripType === 'roundtrip' ? 'none' : '1px solid rgba(148,184,196,0.3)',
+                  backgroundColor: tripType === 'roundtrip' ? '#0EA5E9' : 'transparent',
+                  color: tripType === 'roundtrip' ? '#ffffff' : '#6B7280',
+                  border: tripType === 'roundtrip' ? 'none' : '1px solid rgba(107,114,128,0.3)',
                 }}
               >
                 Round Trip
@@ -62,9 +62,9 @@ export default function BookingEngine() {
                 onClick={() => setTripType('oneway')}
                 className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
                 style={{
-                  backgroundColor: tripType === 'oneway' ? '#D9A66C' : 'transparent',
-                  color: tripType === 'oneway' ? '#011C27' : '#94B8C4',
-                  border: tripType === 'oneway' ? 'none' : '1px solid rgba(148,184,196,0.3)',
+                  backgroundColor: tripType === 'oneway' ? '#0EA5E9' : 'transparent',
+                  color: tripType === 'oneway' ? '#ffffff' : '#6B7280',
+                  border: tripType === 'oneway' ? 'none' : '1px solid rgba(107,114,128,0.3)',
                 }}
               >
                 One Way
@@ -74,7 +74,7 @@ export default function BookingEngine() {
             {/* Route Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 relative">
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="text"
                   placeholder="Flying From - City"
@@ -85,7 +85,7 @@ export default function BookingEngine() {
                 />
               </div>
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="text"
                   placeholder="Flying To - City"
@@ -98,27 +98,27 @@ export default function BookingEngine() {
               <button
                 type="button"
                 className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full items-center justify-center"
-                style={{ backgroundColor: '#042F3E', border: '1px solid rgba(148,184,196,0.2)', zIndex: 2 }}
+                style={{ backgroundColor: '#ffffff', border: '1px solid rgba(107,114,128,0.2)', zIndex: 2 }}
               >
-                <ArrowRightLeft size={14} style={{ color: '#E8F4F8' }} />
+                <ArrowRightLeft size={14} style={{ color: '#1F2937' }} />
               </button>
             </div>
 
             {/* Date Row */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="date"
                   placeholder="Journey Date"
                   className={inputBaseClass + ' pl-10 min-w-0'}
-                  style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })}
-                  onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })}
+                  style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })}
+                  onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })}
                 />
               </div>
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="date"
                   placeholder="Return Date"
@@ -126,20 +126,20 @@ export default function BookingEngine() {
                   className={inputBaseClass + ' pl-10 min-w-0'}
                   style={{
                     ...inputStyle,
-                    colorScheme: 'dark',
+                    colorScheme: 'light',
                     opacity: tripType === 'oneway' ? 0.4 : 1,
                   }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })}
-                  onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })}
+                  onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })}
                 />
               </div>
               <div className="relative">
-                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <select
                   value={passengers}
                   onChange={(e) => setPassengers(e.target.value)}
                   className={inputBaseClass + ' pl-10 appearance-none'}
-                  style={{ ...inputStyle, colorScheme: 'dark' }}
+                  style={{ ...inputStyle, colorScheme: 'light' }}
                 >
                   <option value="1">1 Adult</option>
                   <option value="2">2 Adults</option>
@@ -153,7 +153,7 @@ export default function BookingEngine() {
             {/* Contact Row */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="text"
                   placeholder="Name"
@@ -164,7 +164,7 @@ export default function BookingEngine() {
                 />
               </div>
               <div className="relative">
-                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="tel"
                   placeholder="Phone Number"
@@ -175,7 +175,7 @@ export default function BookingEngine() {
                 />
               </div>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input
                   type="email"
                   placeholder="Email ID"
@@ -190,7 +190,7 @@ export default function BookingEngine() {
             <button
               type="submit"
               className="w-full py-4 rounded-full text-base font-bold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ backgroundColor: '#D9A66C', color: '#011C27' }}
+              style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}
             >
               Search Flights
             </button>
@@ -202,25 +202,25 @@ export default function BookingEngine() {
           <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Destination / Hotel Name" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Check-in" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Check-in" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Check-out" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Check-out" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
               <div className="relative">
-                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'dark' }}>
+                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'light' }}>
                   <option>1 Room, 1 Guest</option>
                   <option>1 Room, 2 Guests</option>
                   <option>2 Rooms, 4 Guests</option>
@@ -229,23 +229,23 @@ export default function BookingEngine() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Name" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="tel" placeholder="Phone Number" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="email" placeholder="Email ID" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <button type="submit" className="w-full py-4 rounded-full text-base font-bold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ backgroundColor: '#D9A66C', color: '#011C27' }}>Search Hotels</button>
+              style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}>Search Hotels</button>
           </div>
         );
 
@@ -254,43 +254,43 @@ export default function BookingEngine() {
           <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Destination" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
-                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'dark' }}>
+                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'light' }}>
                   <option>1 Adult</option><option>2 Adults</option><option>2 Adults, 1 Child</option><option>Family (4+)</option>
                 </select>
               </div>
               <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Name" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
-                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="tel" placeholder="Phone Number" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="email" placeholder="Email ID" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <button type="submit" className="w-full py-4 rounded-full text-base font-bold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ backgroundColor: '#D9A66C', color: '#011C27' }}>Search Vacations</button>
+              style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}>Search Vacations</button>
           </div>
         );
 
@@ -299,47 +299,47 @@ export default function BookingEngine() {
           <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Pick-up Location" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Drop-off Location" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Pick-up Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Pick-up Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Drop-off Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Drop-off Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Name" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="tel" placeholder="Phone" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="email" placeholder="Email" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <button type="submit" className="w-full py-4 rounded-full text-base font-bold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ backgroundColor: '#D9A66C', color: '#011C27' }}>Search Car Rentals</button>
+              style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}>Search Car Rentals</button>
           </div>
         );
 
@@ -348,48 +348,48 @@ export default function BookingEngine() {
           <div className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="From City" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <MapPin size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="To City" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="relative">
-                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'dark' }}
-                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'dark' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'dark' })} />
+                <Calendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <input type="date" placeholder="Travel Date" className={inputBaseClass + ' pl-10 min-w-0'} style={{ ...inputStyle, colorScheme: 'light' }}
+                  onFocus={(e) => Object.assign(e.target.style, { ...inputFocusStyle, colorScheme: 'light' })} onBlur={(e) => Object.assign(e.target.style, { ...inputStyle, colorScheme: 'light' })} />
               </div>
               <div className="relative">
-                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
-                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'dark' }}>
+                <Users size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
+                <select className={inputBaseClass + ' pl-10 appearance-none'} style={{ ...inputStyle, colorScheme: 'light' }}>
                   <option>1 Passenger</option><option>2 Passengers</option><option>3 Passengers</option><option>4+ Passengers</option>
                 </select>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="relative">
-                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="text" placeholder="Name" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Phone size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="tel" placeholder="Phone" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
               <div className="relative">
-                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#94B8C4' }} />
+                <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#6B7280' }} />
                 <input type="email" placeholder="Email" className={inputBaseClass + ' pl-10'} style={inputStyle}
                   onFocus={(e) => Object.assign(e.target.style, inputFocusStyle)} onBlur={(e) => Object.assign(e.target.style, inputStyle)} />
               </div>
             </div>
             <button type="submit" className="w-full py-4 rounded-full text-base font-bold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-              style={{ backgroundColor: '#D9A66C', color: '#011C27' }}>Search Bus Tickets</button>
+              style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}>Search Bus Tickets</button>
           </div>
         );
     }
@@ -403,8 +403,8 @@ export default function BookingEngine() {
           onSubmit={handleSubmit}
           className="card-abyss p-6 md:p-10 mx-auto max-w-[1000px] overflow-hidden"
           style={{
-            border: '1px solid rgba(148,184,196,0.15)',
-            boxShadow: '0 8px 48px rgba(0,212,170,0.06)',
+            border: '1px solid rgba(14,165,233,0.15)',
+            boxShadow: '0 8px 48px rgba(14,165,233,0.06)',
           }}
         >
           {/* Tabs */}
@@ -418,8 +418,8 @@ export default function BookingEngine() {
                   onClick={() => setActiveTab(tab.id)}
                   className="flex items-center gap-2 px-4 md:px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300"
                   style={{
-                    backgroundColor: activeTab === tab.id ? '#D9A66C' : 'transparent',
-                    color: activeTab === tab.id ? '#011C27' : '#94B8C4',
+                    backgroundColor: activeTab === tab.id ? '#0EA5E9' : 'transparent',
+                    color: activeTab === tab.id ? '#ffffff' : '#6B7280',
                   }}
                 >
                   <Icon size={16} />

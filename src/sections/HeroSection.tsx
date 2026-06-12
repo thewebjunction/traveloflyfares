@@ -41,7 +41,7 @@ export default function HeroSection() {
     };
   }, []);
 
-  const stats = ['24/7 Support', '500+ Airlines', '1000+ Destinations', 'Best Price Guarantee'];
+  const stats = ['Round-the-Clock Support', 'Extensive Airline Network', 'Flights Across 1000+ Destinations', 'Competitive Fare Options'];
 
   return (
     <section
@@ -58,17 +58,9 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 0 }}
       >
-        <source src="/videos/vid-hero-travel.mp4" type="video/mp4" />
+        <source src="/videos/hero-bg.webm" type="video/webm" />
       </video>
 
-      {/* Gradient Overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          zIndex: 1,
-          background: 'linear-gradient(180deg, rgba(1,28,39,0.4) 0%, rgba(1,28,39,0.7) 60%, rgba(1,28,39,0.95) 100%)',
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-[800px] mx-auto pt-20">
@@ -77,26 +69,26 @@ export default function HeroSection() {
           ref={headingRef}
           className="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4"
           style={{
-            color: '#E8F4F8',
+            color: '#1F2937',
             opacity: 0,
             transform: 'translateY(30px)',
-            textShadow: '0 0 40px rgba(217,166,108,0.3)',
+            textShadow: '0 0 40px rgba(14,165,233,0.2)',
           }}
         >
-          Stop Overpaying <br className="hidden sm:block" />
-          <span style={{ color: '#D9A66C' }}>for Flights</span>
+          Fly More, Spend Less <br className="hidden sm:block" />
+          <span style={{ color: '#0EA5E9' }}>On Every Journey</span>
         </h1>
 
         <p
           ref={bodyRef}
           className="text-base md:text-lg max-w-[500px] mx-auto mb-8"
           style={{
-            color: '#94B8C4',
+            color: '#6B7280',
             opacity: 0,
             transform: 'translateY(30px)',
           }}
         >
-          Our experts find unpublished fares across 500+ airlines — deals you won't see online. One call, instant savings.
+          Compare flight options, explore destinations, and get support from travel experts whenever you need it.
         </p>
 
         <div
@@ -133,8 +125,9 @@ export default function HeroSection() {
               key={stat}
               className="px-4 py-2 rounded-full text-xs font-medium"
               style={{
-                backgroundColor: '#042F3E',
-                color: '#94B8C4',
+                backgroundColor: '#ffffff',
+                color: '#6B7280',
+                boxShadow: '0 2px 8px rgba(14,165,233,0.12)',
               }}
             >
               {stat}

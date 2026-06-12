@@ -13,7 +13,7 @@ export default function MobileCallWidget() {
       <div className="flex justify-start pl-5 mb-[-10px] relative z-10">
         <div
           className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold shadow-md"
-          style={{ backgroundColor: '#011C27', color: '#00b8f1' }}
+          style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}
         >
           <Armchair size={13} />
           <span>Best Seats</span>

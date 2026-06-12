@@ -17,19 +17,19 @@ export default function NewsletterSection() {
     <section
       className="section-padding"
       style={{
-        backgroundColor: '#011C27',
-        borderTop: '1px solid rgba(148,184,196,0.1)',
+        backgroundColor: '#F0F9FF',
+        borderTop: '1px solid rgba(14,165,233,0.1)',
       }}
     >
       <div className="content-max" ref={sectionRef}>
         <div className="reveal-child max-w-[560px] mx-auto text-center">
           <h2
             className="text-2xl sm:text-3xl md:text-4xl mb-4"
-            style={{ color: '#E8F4F8' }}
+            style={{ color: '#1F2937' }}
           >
             Get Exclusive Deals
           </h2>
-          <p className="text-sm md:text-base mb-8" style={{ color: '#94B8C4' }}>
+          <p className="text-sm md:text-base mb-8" style={{ color: '#6B7280' }}>
             Subscribe to our newsletter for promo codes, flash sales, and travel tips &mdash; up to $20 off your next booking.
           </p>
 
@@ -42,16 +42,16 @@ export default function NewsletterSection() {
               required
               className="flex-1 px-5 py-3.5 rounded-xl text-sm outline-none transition-all duration-200"
               style={{
-                backgroundColor: '#042F3E',
-                border: '1px solid rgba(148,184,196,0.2)',
-                color: '#E8F4F8',
+                backgroundColor: '#ffffff',
+                border: '1px solid rgba(107,114,128,0.2)',
+                color: '#1F2937',
               }}
               onFocus={(e) => {
-                e.target.style.border = '2px solid #00D4AA';
-                e.target.style.boxShadow = '0 0 0 4px rgba(0,212,170,0.15)';
+                e.target.style.border = '2px solid #0EA5E9';
+                e.target.style.boxShadow = '0 0 0 4px rgba(14,165,233,0.15)';
               }}
               onBlur={(e) => {
-                e.target.style.border = '1px solid rgba(148,184,196,0.2)';
+                e.target.style.border = '1px solid rgba(107,114,128,0.2)';
                 e.target.style.boxShadow = 'none';
               }}
             />
@@ -59,15 +59,15 @@ export default function NewsletterSection() {
               type="submit"
               className="px-8 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 shrink-0"
               style={{
-                backgroundColor: '#D9A66C',
-                color: '#011C27',
+                backgroundColor: '#0EA5E9',
+                color: '#ffffff',
               }}
             >
               Subscribe
             </button>
           </form>
 
-          <p className="text-xs mt-4" style={{ color: 'rgba(148,184,196,0.6)' }}>
+          <p className="text-xs mt-4" style={{ color: 'rgba(107,114,128,0.6)' }}>
             No spam, unsubscribe anytime.
           </p>
         </div>

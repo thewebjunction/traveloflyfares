@@ -6,25 +6,25 @@ const cards = [
     image: '/images/img-dubai.jpg',
     badge: 'OPEN ALL\nYEAR ROUND!',
     bg: '#3D2B1F',
-    heading: 'Expert Agents',
-    desc: 'Our flight specialists work around the clock to find you unpublished fares no search engine can.',
-    links: ['Call an Expert', 'Get Fare Alerts', 'Exclusive Deals', 'Last-Minute Flights'],
+    heading: 'Expert Travel Assistance',
+    desc: 'Our travel experts are here to help you find suitable flight options, understand your choices, and make your booking experience simple and convenient.',
+    links: ['Call a Travel Expert', 'Get Flight Assistance', 'Explore Travel Options', 'Last-Minute Booking Help'],
   },
   {
     image: '/images/img-mauritius.jpg',
     badge: null,
     bg: '#4E5C1A',
-    heading: 'Best Fares',
-    desc: 'We compare 500+ airlines to guarantee the lowest price every time — or we refund the difference.',
-    links: ['Compare Fares', 'Business Class Deals', 'Group Travel', 'First Class Upgrades'],
+    heading: 'Competitive Fares',
+    desc: 'We help you explore flight options across multiple airlines and destinations, making it easier to compare choices that fit your travel plans and budget.',
+    links: ['Compare Flight Options', 'Domestic & International Flights', 'Business Class Options', 'Group Travel Assistance'],
   },
   {
     image: '/images/img-thailand.jpg',
     badge: null,
     bg: '#1A5068',
-    heading: 'Easy Booking',
-    desc: 'Instant e-tickets in minutes. Simple, fast, and completely hassle-free reservations every time.',
-    links: ['Book a Flight', 'Hotel + Flight Bundle', 'Vacation Packages', 'Car Rentals'],
+    heading: 'Easy & Convenient Booking',
+    desc: 'From searching flights to getting booking support, we make the travel planning process smooth, quick, and hassle-free.',
+    links: ['Book Your Flight', 'Flight & Travel Assistance', 'Flexible Travel Options', 'Reservation Support'],
   },
 ];
 
@@ -32,15 +32,15 @@ export default function WhyBookSection() {
   const sectionRef = useScrollReveal<HTMLDivElement>({ stagger: 0.15, y: 60 });
 
   return (
-    <section id="hotels" className="section-padding" style={{ backgroundColor: '#042F3E' }}>
+    <section id="hotels" className="section-padding" style={{ backgroundColor: '#F0F9FF' }}>
       <div className="content-max" ref={sectionRef}>
 
         {/* Section heading */}
         <div className="text-center mb-12 reveal-child">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4" style={{ color: '#E8F4F8' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4" style={{ color: '#1F2937' }}>
             Why Book With Us
           </h2>
-          <div className="w-[60px] h-[2px] mx-auto" style={{ backgroundColor: '#D9A66C' }} />
+          <div className="w-[60px] h-[2px] mx-auto" style={{ backgroundColor: '#0EA5E9' }} />
         </div>
 
         {/* Cards */}

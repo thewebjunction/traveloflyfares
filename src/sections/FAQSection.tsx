@@ -4,28 +4,28 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const faqs = [
   {
-    q: 'How do I book a flight with Travelofly Fares?',
-    a: 'Booking a flight is easy! Simply use our search form above to enter your travel details \u2014 departure city, destination, dates, and number of passengers. Our travel experts will then contact you with the best available options and guide you through the booking process. You can also call us directly at +1 (833) 701-0952 for personalized assistance.',
+    q: 'How can I book a flight through Traveloflyfares?',
+    a: 'Booking a flight is simple. You can explore available flight options on our website or contact our travel support team for assistance with selecting and reserving your preferred itinerary.',
   },
   {
-    q: 'What is your cancellation policy?',
-    a: 'Our cancellation policy varies depending on the airline and fare type. Most bookings can be cancelled within 24 hours for a full refund. For other cancellations, fees may apply based on the airline\'s policy. Our agents will always inform you of the specific cancellation terms before you complete your booking.',
+    q: 'Can I modify or cancel my booking after confirmation?',
+    a: 'Changes and cancellations may be possible depending on the airline\'s policies and fare rules. Contact our support team as soon as possible, and we\'ll help you understand the available options.',
   },
   {
-    q: 'Can I make changes to my existing reservation?',
-    a: 'Yes, you can make changes to your reservation. We offer support for date changes, route modifications, passenger name corrections, and other adjustments. Change fees depend on the airline\'s policy. Contact our 24/7 support team at +1 (833) 701-0952 and we\'ll handle the changes for you.',
+    q: 'When will I receive my booking confirmation?',
+    a: 'Once your reservation is successfully completed and confirmed, your booking details and e-ticket information will be sent to the email address provided during the booking process.',
   },
   {
-    q: 'Are there any hidden fees?',
-    a: 'Absolutely not. The price we quote is the price you pay. All fares displayed on our website are inclusive of taxes and fees. We believe in transparent pricing with no surprises. Any optional add-ons (like travel insurance or seat selection) will always be clearly presented before you confirm.',
+    q: 'Do you offer domestic and international flight options?',
+    a: 'Yes, Traveloflyfares helps travelers explore both domestic and international flight options across a wide range of destinations and airline partners.',
   },
   {
-    q: 'How do I receive my e-ticket?',
-    a: 'Once your booking is confirmed and payment is processed, your e-ticket will be emailed to you within minutes. You\'ll also receive a booking confirmation with your reservation details. If you need assistance, our team can resend your tickets or help you with check-in.',
+    q: 'Are baggage allowances included with every ticket?',
+    a: 'Baggage allowances vary by airline, route, and fare type. We recommend reviewing the baggage policy associated with your selected itinerary before completing your booking.',
   },
   {
-    q: 'Do you offer travel insurance?',
-    a: 'Yes, we offer comprehensive travel insurance options that cover trip cancellation, medical emergencies, baggage loss, and flight delays. Our agents can help you choose the right coverage for your trip. We highly recommend travel insurance for international journeys.',
+    q: 'How can I contact customer support?',
+    a: 'Our customer support team is available to assist with booking inquiries, reservation-related questions, and general travel assistance. You can reach us by phone or email through the contact information provided on our website.',
   },
 ];
 
@@ -38,19 +38,19 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="bus" className="bg-abyss section-padding">
+    <section id="bus" className="section-padding" style={{ backgroundColor: '#F0F9FF' }}>
       <div className="content-max" ref={sectionRef}>
         {/* Header */}
         <div className="text-center mb-12 reveal-child">
           <h2
             className="text-2xl sm:text-3xl md:text-4xl mb-4"
-            style={{ color: '#E8F4F8' }}
+            style={{ color: '#1F2937' }}
           >
             Frequently Asked Questions
           </h2>
           <div
             className="w-[60px] h-[2px] mx-auto"
-            style={{ backgroundColor: '#D9A66C' }}
+            style={{ backgroundColor: '#0EA5E9' }}
           />
         </div>
 
@@ -61,7 +61,7 @@ export default function FAQSection() {
               key={i}
               className="reveal-child"
               style={{
-                borderTop: '1px solid rgba(148,184,196,0.15)',
+                borderTop: '1px solid rgba(14,165,233,0.15)',
               }}
             >
               <button
@@ -70,7 +70,7 @@ export default function FAQSection() {
               >
                 <span
                   className="text-base md:text-lg font-semibold pr-4"
-                  style={{ color: '#E8F4F8' }}
+                  style={{ color: '#1F2937' }}
                 >
                   {faq.q}
                 </span>
@@ -78,7 +78,7 @@ export default function FAQSection() {
                   size={20}
                   className="shrink-0 transition-transform duration-300"
                   style={{
-                    color: '#94B8C4',
+                    color: '#6B7280',
                     transform: openIndex === i ? 'rotate(180deg)' : 'rotate(0deg)',
                   }}
                 />
@@ -92,7 +92,7 @@ export default function FAQSection() {
               >
                 <p
                   className="pb-5 text-sm md:text-base leading-relaxed"
-                  style={{ color: '#94B8C4' }}
+                  style={{ color: '#6B7280' }}
                 >
                   {faq.a}
                 </p>

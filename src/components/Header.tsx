@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import { Phone, Menu, X } from 'lucide-react';
 import logoImg from '../../images/logo 2.png';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -47,21 +48,21 @@ export default function Header() {
       <div className="flex items-center justify-between max-w-[1400px] mx-auto">
 
         {/* Logo */}
-        <a
-          href="#"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        <Link
+          to="/"
+          onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="shrink-0"
         >
-          <img src={logoImg} alt="Travelofly Fares" className="w-auto" style={{ height: '80px' }} />
-        </a>
+          <img src={logoImg} alt="Travelofly Fares" className="w-auto" style={{ height: '80px', filter: 'brightness(0)' }} />
+        </Link>
 
         {/* Desktop: centered dark pill nav */}
         <nav
           className="hidden md:flex items-center gap-1 px-6 py-2 rounded-full"
           style={{
-            backgroundColor: 'rgba(4, 47, 62, 0.92)',
+            backgroundColor: 'rgba(255,255,255,0.95)',
             backdropFilter: 'blur(12px)',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
+            boxShadow: '0 4px 24px rgba(14,165,233,0.12)',
           }}
         >
           {navLinks.map((link) => (
@@ -71,8 +72,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, link.href)}
               className="relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200"
               style={{
-                color: activeLink === link.href ? '#E8F4F8' : '#94B8C4',
-                backgroundColor: activeLink === link.href ? 'rgba(255,255,255,0.08)' : 'transparent',
+                color: activeLink === link.href ? '#1F2937' : '#6B7280',
+                backgroundColor: activeLink === link.href ? 'rgba(14,165,233,0.1)' : 'transparent',
               }}
             >
               {link.label}
@@ -85,7 +86,7 @@ export default function Header() {
           <a
             href="tel:+18337010952"
             className="flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:scale-110"
-            style={{ backgroundColor: 'rgba(4,47,62,0.92)', color: '#94B8C4' }}
+            style={{ backgroundColor: 'rgba(255,255,255,0.95)', color: '#6B7280', boxShadow: '0 2px 8px rgba(14,165,233,0.1)' }}
             aria-label="Call us"
           >
             <Phone size={16} />
@@ -93,7 +94,7 @@ export default function Header() {
           <a
             href="tel:+18337010952"
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5"
-            style={{ backgroundColor: '#D9A66C', color: '#011C27' }}
+            style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}
           >
             Call Now
           </a>
@@ -104,7 +105,7 @@ export default function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex items-center justify-center w-10 h-10 rounded-full"
-            style={{ backgroundColor: 'rgba(4,47,62,0.92)', color: '#E8F4F8' }}
+            style={{ backgroundColor: 'rgba(255,255,255,0.95)', color: '#1F2937', boxShadow: '0 2px 8px rgba(14,165,233,0.1)' }}
             aria-label="Menu"
           >
             {mobileOpen ? <X size={18} /> : <Menu size={18} />}
@@ -116,7 +117,7 @@ export default function Header() {
       {mobileOpen && (
         <div
           className="md:hidden mt-3 mx-auto rounded-2xl overflow-hidden max-w-sm"
-          style={{ backgroundColor: 'rgba(4,47,62,0.97)', backdropFilter: 'blur(16px)' }}
+          style={{ backgroundColor: 'rgba(255,255,255,0.98)', backdropFilter: 'blur(16px)', boxShadow: '0 8px 24px rgba(14,165,233,0.12)' }}
         >
           {navLinks.map((link) => (
             <a
@@ -125,8 +126,8 @@ export default function Header() {
               onClick={(e) => handleNavClick(e, link.href)}
               className="flex items-center px-6 py-4 text-sm font-medium border-b transition-colors duration-200"
               style={{
-                color: activeLink === link.href ? '#E8F4F8' : '#94B8C4',
-                borderColor: 'rgba(148,184,196,0.1)',
+                color: activeLink === link.href ? '#1F2937' : '#6B7280',
+                borderColor: 'rgba(14,165,233,0.1)',
               }}
             >
               {link.label}

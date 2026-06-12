@@ -68,15 +68,15 @@ export default function PackagesSection() {
   };
 
   return (
-    <section id="vacations" className="bg-abyss section-padding">
+    <section id="vacations" className="section-padding" style={{ backgroundColor: '#F0F9FF' }}>
       <div className="content-max">
         {/* Header */}
         <div ref={headerRef} className="flex items-end justify-between mb-10">
           <div className="reveal-child">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl" style={{ color: '#E8F4F8' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl" style={{ color: '#1F2937' }}>
               Popular Vacation Packages
             </h2>
-            <p className="text-sm mt-2" style={{ color: '#94B8C4' }}>
+            <p className="text-sm mt-2" style={{ color: '#6B7280' }}>
               Browse our handpicked vacation deals
             </p>
           </div>
@@ -85,8 +85,8 @@ export default function PackagesSection() {
               onClick={() => scroll('left')}
               className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
               style={{
-                border: '1px solid rgba(232,244,248,0.3)',
-                color: canScrollLeft ? '#E8F4F8' : 'rgba(232,244,248,0.3)',
+                border: '1px solid rgba(14,165,233,0.3)',
+                color: canScrollLeft ? '#1F2937' : 'rgba(14,165,233,0.3)',
                 opacity: canScrollLeft ? 1 : 0.5,
               }}
               disabled={!canScrollLeft}
@@ -97,8 +97,8 @@ export default function PackagesSection() {
               onClick={() => scroll('right')}
               className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200"
               style={{
-                border: '1px solid rgba(232,244,248,0.3)',
-                color: canScrollRight ? '#E8F4F8' : 'rgba(232,244,248,0.3)',
+                border: '1px solid rgba(14,165,233,0.3)',
+                color: canScrollRight ? '#1F2937' : 'rgba(14,165,233,0.3)',
                 opacity: canScrollRight ? 1 : 0.5,
               }}
               disabled={!canScrollRight}
@@ -148,10 +148,10 @@ export default function PackagesSection() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#E8F4F8' }}>
+                <h3 className="text-xl font-bold mb-2" style={{ color: '#ffffff' }}>
                   {pkg.title}
                 </h3>
-                <p className="text-xs mb-3" style={{ color: '#94B8C4' }}>
+                <p className="text-xs mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
                   {pkg.duration}
                 </p>
 
@@ -161,17 +161,17 @@ export default function PackagesSection() {
                     <Star
                       key={s}
                       size={14}
-                      fill={s <= pkg.rating ? '#D9A66C' : 'transparent'}
-                      stroke={s <= pkg.rating ? '#D9A66C' : 'rgba(148,184,196,0.3)'}
+                      fill={s <= pkg.rating ? '#0EA5E9' : 'transparent'}
+                      stroke={s <= pkg.rating ? '#0EA5E9' : 'rgba(255,255,255,0.3)'}
                     />
                   ))}
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium" style={{ color: '#D9A66C' }}>
+                  <span className="text-sm font-medium" style={{ color: '#ffffff' }}>
                     From {pkg.price}
                   </span>
-                  <span className="flex items-center gap-1 text-xs font-medium" style={{ color: '#00D4AA' }}>
+                  <span className="flex items-center gap-1 text-xs font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>
                     View Deal <ArrowRight size={12} />
                   </span>
                 </div>

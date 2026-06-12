@@ -13,14 +13,14 @@ export default function FlightsGridSection() {
   const sectionRef = useScrollReveal<HTMLDivElement>({ stagger: 0.12, y: 40 });
 
   return (
-    <section id="deals" className="bg-void section-padding">
+    <section id="deals" className="section-padding" style={{ backgroundColor: '#F0F9FF' }}>
       <div className="content-max" ref={sectionRef}>
         {/* Header */}
         <div className="text-center mb-12 reveal-child">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3" style={{ color: '#E8F4F8' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3" style={{ color: '#1F2937' }}>
             Affordable Flights
           </h2>
-          <p className="text-sm md:text-base" style={{ color: '#94B8C4' }}>
+          <p className="text-sm md:text-base" style={{ color: '#6B7280' }}>
             Best fares from across the U.S. Updated daily.
           </p>
         </div>
@@ -50,13 +50,13 @@ export default function FlightsGridSection() {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold mb-1" style={{ color: '#E8F4F8' }}>
+                <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>
                   {dest.city}
                 </h3>
-                <p className="text-xs mb-3" style={{ color: '#94B8C4' }}>
+                <p className="text-xs mb-3" style={{ color: '#6B7280' }}>
                   {dest.date}
                 </p>
-                <p className="text-2xl font-extrabold" style={{ color: '#D9A66C' }}>
+                <p className="text-2xl font-extrabold" style={{ color: '#0EA5E9' }}>
                   From {dest.price}
                 </p>
               </div>

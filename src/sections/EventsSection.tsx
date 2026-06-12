@@ -23,12 +23,12 @@ export default function EventsSection() {
   const sectionRef = useScrollReveal<HTMLDivElement>({ stagger: 0.15, y: 40 });
 
   return (
-    <section id="car" className="bg-void section-padding">
+    <section id="car" className="section-padding" style={{ backgroundColor: '#F0F9FF' }}>
       <div className="content-max" ref={sectionRef}>
         {/* Header */}
         <h2
           className="reveal-child text-2xl sm:text-3xl md:text-4xl mb-10"
-          style={{ color: '#E8F4F8' }}
+          style={{ color: '#1F2937' }}
         >
           Special Travel Deals
         </h2>
@@ -62,7 +62,7 @@ export default function EventsSection() {
             <div className="absolute top-6 left-6">
               <span
                 className="px-4 py-1.5 rounded-full text-xs font-semibold"
-                style={{ backgroundColor: '#00D4AA', color: '#011C27' }}
+                style={{ backgroundColor: '#0EA5E9', color: '#ffffff' }}
               >
                 Limited Time
               </span>
@@ -70,11 +70,11 @@ export default function EventsSection() {
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <h3
                 className="text-2xl sm:text-3xl md:text-4xl mb-3"
-                style={{ color: '#E8F4F8' }}
+                style={{ color: '#1F2937' }}
               >
                 Summer Sale: Up to 50% Off
               </h3>
-              <p className="text-sm mb-5 max-w-[400px]" style={{ color: '#94B8C4' }}>
+              <p className="text-sm mb-5 max-w-[400px]" style={{ color: '#6B7280' }}>
                 Book by June 30th and save big on international flights.
               </p>
               <button
@@ -104,15 +104,15 @@ export default function EventsSection() {
                   className="w-20 h-20 rounded-xl object-cover shrink-0"
                 />
                 <div className="flex-1 min-w-0">
-                  <p className="text-xs font-medium mb-1" style={{ color: '#00D4AA' }}>
+                  <p className="text-xs font-medium mb-1" style={{ color: '#0284C7' }}>
                     Special Offer
                   </p>
-                  <h4 className="text-base font-semibold mb-1 truncate" style={{ color: '#E8F4F8' }}>
+                  <h4 className="text-base font-semibold mb-1 truncate" style={{ color: '#1F2937' }}>
                     {deal.title}
                   </h4>
                   <span
                     className="flex items-center gap-1 text-xs font-medium transition-colors duration-200"
-                    style={{ color: '#00D4AA' }}
+                    style={{ color: '#0284C7' }}
                   >
                     Details <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-1" />
                   </span>
