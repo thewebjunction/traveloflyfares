@@ -6,7 +6,7 @@ const items = [
   { icon: <Phone size={13} />, text: 'Call our experts now: +1 (833) 701-0952' },
   { icon: <Star size={13} />, text: 'Best Price Guarantee — we beat any quote' },
   { icon: <Clock size={13} />, text: 'Limited seats available — prices rise daily' },
-  { icon: <Plane size={13} />, text: '500+ airlines · 1,000+ destinations worldwide' },
+  { icon: <Plane size={13} />, text: '300+ airlines · destinations worldwide' },
   { icon: <Shield size={13} />, text: '24/7 live support · no hold times · instant savings' },
 ];
 

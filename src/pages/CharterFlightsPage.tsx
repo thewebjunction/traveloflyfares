@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Plane, CheckCircle, ChevronDown, Star, Shield } from 'lucide-react';
+import { Phone, Plane, CheckCircle, ChevronDown, Shield } from 'lucide-react';
 
 const useCases = [
   {
@@ -108,27 +108,6 @@ const faqs = [
   {
     q: 'Is charter travel safe?',
     a: 'Yes. Reputable charter operators are subject to FAA Part 135 regulations in the US (or equivalent international standards), which govern safety standards, pilot certification, aircraft maintenance, and operational procedures. We only work with operators that meet these standards.',
-  },
-];
-
-const testimonials = [
-  {
-    name: 'Thomas B.',
-    role: 'CFO, Technology Company',
-    text: 'We chartered a flight for our executive team to a board retreat. The process was seamless — private terminal, no delays, perfect service. This is how business travel should feel.',
-    stars: 5,
-  },
-  {
-    name: 'Coach Raymond A.',
-    role: 'Head Coach, University Athletics',
-    text: 'Moving 45 athletes and their equipment across the country for a tournament. Traveloflyfares handled every detail from the cargo manifest to on-time departure. Flawless.',
-    stars: 5,
-  },
-  {
-    name: 'Sarah M.',
-    role: 'Event Planner',
-    text: 'Arranged a 120-person charter for a corporate incentive trip to Mexico. My clients were blown away by the experience. I\'ll use them for every group charter going forward.',
-    stars: 5,
   },
 ];
 
@@ -261,26 +240,6 @@ export default function CharterFlightsPage() {
                 We only facilitate charters through operators that meet FAA Part 135 standards (US) or equivalent international aviation regulations. Safety certifications, pilot qualifications, and maintenance records are part of every operator we work with.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20">
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>What Charter Clients Say</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="p-6 rounded-xl" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}>
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />)}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{t.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

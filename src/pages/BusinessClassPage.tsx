@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Star, Shield, CheckCircle, ChevronDown } from 'lucide-react';
+import { Phone, Shield, CheckCircle, ChevronDown, Star } from 'lucide-react';
 
 const amenities = [
   {
@@ -100,27 +100,6 @@ const faqs = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Christine L.',
-    role: 'Executive traveler',
-    text: 'I fly to London 6 times a year for work. Since using Traveloflyfares for business class, I\'ve consistently paid less than what my corporate portal quotes and gotten better seats.',
-    stars: 5,
-  },
-  {
-    name: 'Jonathan W.',
-    role: 'International consultant',
-    text: 'They found me a business class seat to Singapore that was $800 less than anything I could find on the booking sites. The seat and experience were excellent.',
-    stars: 5,
-  },
-  {
-    name: 'Maria F.',
-    role: 'Frequent flyer',
-    text: 'The agent gave me real advice on which seats on my specific aircraft to pick and which lounge to use at Heathrow. That kind of knowledge is worth the call alone.',
-    stars: 5,
-  },
-];
-
 export default function BusinessClassPage() {
   const [openFaq, setOpenFaq] = useState(-1);
 
@@ -150,7 +129,7 @@ export default function BusinessClassPage() {
             >
               <Phone size={18} /> Book Business Class — +1 (833) 701-0952
             </a>
-            <div className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>500+ airlines · 24/7 support</div>
+            <div className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>Multiple airlines · 24/7 support</div>
           </div>
         </div>
       </div>
@@ -160,8 +139,8 @@ export default function BusinessClassPage() {
         <div className="content-max max-w-[900px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { val: '500+', label: 'Airlines Searched' },
-              { val: '150+', label: 'Countries Covered' },
+              { val: '300+', label: 'Airlines Searched' },
+              { val: '100+', label: 'Countries Covered' },
               { val: '24/7', label: 'Expert Support' },
               { val: 'Best', label: 'Available Pricing' },
             ].map((s) => (
@@ -201,7 +180,9 @@ export default function BusinessClassPage() {
         <div className="content-max max-w-[900px] mx-auto">
           <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>Popular Business Class Routes</h2>
           <div className="w-[60px] h-[3px] mx-auto mb-4" style={{ backgroundColor: '#0EA5E9' }} />
-          <p className="text-center text-sm mb-10" style={{ color: '#9CA3AF' }}>Fares are indicative. Call us for current pricing and seat availability.</p>
+          <div className="mb-10 px-5 py-3 rounded-xl text-sm text-center" style={{ backgroundColor: 'rgba(14,165,233,0.08)', border: '1px solid rgba(14,165,233,0.2)', color: '#6B7280' }}>
+            <strong style={{ color: '#1F2937' }}>Note:</strong> Prices shown are indicative estimates only and are not guaranteed. Actual fares depend on availability, travel dates, and airline conditions. Call us for confirmed real-time pricing.
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {routes.map((r) => (
               <a
@@ -268,26 +249,6 @@ export default function BusinessClassPage() {
                 All business class bookings are processed through verified airline reservation systems. Our agents confirm your seat assignment and send your e-ticket before you hang up. No surprises at the airport.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20" style={{ backgroundColor: '#ffffff' }}>
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>Business Class Travelers</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="p-6 rounded-xl" style={{ border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}>
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />)}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{t.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>

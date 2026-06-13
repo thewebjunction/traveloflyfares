@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Globe, ChevronDown, CheckCircle, Star } from 'lucide-react';
+import { Phone, Globe, ChevronDown, CheckCircle } from 'lucide-react';
 
 const regions = [
   {
@@ -54,8 +54,8 @@ const regions = [
 
 const benefits = [
   {
-    title: '500+ Global Airlines',
-    desc: 'Search international fares across hundreds of carriers worldwide — from global giants like Emirates, British Airways, and Lufthansa to budget international airlines.',
+    title: 'Wide Airline Coverage',
+    desc: 'Search international fares across carriers worldwide — from global giants like Emirates, British Airways, and Lufthansa to regional and budget international airlines.',
   },
   {
     title: 'Multi-City & Stopover Routing',
@@ -115,24 +115,6 @@ const faqs = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Priya S.',
-    text: 'Got a fantastic business class fare to Mumbai that I couldn\'t find anywhere online. The agent was knowledgeable and patient throughout.',
-    stars: 5,
-  },
-  {
-    name: 'Carlos R.',
-    text: 'Booked a complicated multi-city Europe trip — London, Paris, and Rome — all coordinated perfectly. Amazing service.',
-    stars: 5,
-  },
-  {
-    name: 'Linda T.',
-    text: 'They found me a fare to Bangkok with a convenient stopover that actually saved me over $200. Very impressed.',
-    stars: 4,
-  },
-];
-
 export default function InternationalFlightsPage() {
   const [openFaq, setOpenFaq] = useState(-1);
 
@@ -150,7 +132,7 @@ export default function InternationalFlightsPage() {
           </h1>
           <div className="w-[60px] h-[3px] mx-auto mb-6" style={{ backgroundColor: '#0EA5E9' }} />
           <p className="text-base md:text-lg mb-8" style={{ color: 'rgba(255,255,255,0.75)', maxWidth: 640, margin: '0 auto 24px' }}>
-            Explore the world with competitive international fares. From Europe to Asia, the Caribbean to Africa — our experts search 500+ airlines worldwide to find the right flight at the right price.
+            Explore the world with competitive international fares. From Europe to Asia, the Caribbean to Africa — our experts search airlines worldwide to find the right flight at the right price.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
@@ -170,9 +152,9 @@ export default function InternationalFlightsPage() {
         <div className="content-max max-w-[900px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { val: '500+', label: 'Airlines Worldwide' },
-              { val: '150+', label: 'Countries' },
-              { val: '1,000+', label: 'International Routes' },
+              { val: '300+', label: 'Airlines Worldwide' },
+              { val: '100+', label: 'Countries' },
+              { val: '500+', label: 'International Routes' },
               { val: '24/7', label: 'Expert Support' },
             ].map((s) => (
               <div key={s.label}>
@@ -217,9 +199,9 @@ export default function InternationalFlightsPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-xs mt-8" style={{ color: '#9CA3AF' }}>
-            * Prices shown are indicative. Call us for confirmed real-time fares based on your travel dates.
-          </p>
+          <div className="mt-8 px-5 py-3 rounded-xl text-sm text-center" style={{ backgroundColor: 'rgba(14,165,233,0.08)', border: '1px solid rgba(14,165,233,0.2)', color: '#6B7280' }}>
+            <strong style={{ color: '#1F2937' }}>Note:</strong> Prices shown are indicative estimates only and are not guaranteed. Actual fares depend on availability, travel dates, and airline conditions. Call us for confirmed real-time pricing.
+          </div>
         </div>
       </div>
 
@@ -253,25 +235,6 @@ export default function InternationalFlightsPage() {
                 <div className="text-2xl font-black mb-3" style={{ color: 'rgba(14,165,233,0.2)' }}>0{i + 1}</div>
                 <h3 className="font-bold mb-2" style={{ color: '#1F2937' }}>{tip.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{tip.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20" style={{ backgroundColor: '#ffffff' }}>
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>What International Travelers Say</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="p-6 rounded-xl" style={{ border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}>
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />)}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
               </div>
             ))}
           </div>

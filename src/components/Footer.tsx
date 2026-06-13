@@ -49,7 +49,7 @@ export default function Footer() {
                 Travelofly Fares
               </h3>
               <p className="text-sm" style={{ color: '#9CA3AF' }}>
-                Your trusted travel partner since 2017.
+                Your trusted travel partner.
               </p>
             </div>
             <div className="flex items-center gap-6">

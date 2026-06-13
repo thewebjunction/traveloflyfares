@@ -6,7 +6,7 @@ const steps = [
     icon: Search,
     number: '01',
     title: 'Search Your Flight',
-    desc: 'Tell us your travel dates, destination, and preferences. Our team searches across 500+ airlines to find the best available options for you.',
+    desc: 'Tell us your travel dates, destination, and preferences. Our team searches across multiple airlines to find the best available options for you.',
   },
   {
     icon: CheckCircle,
@@ -29,7 +29,7 @@ const steps = [
 ];
 
 const features = [
-  { title: '500+ Airlines', desc: 'Access to a vast network of domestic and international carriers.' },
+  { title: '300+ Airlines', desc: 'Access to a wide network of domestic and international carriers.' },
   { title: '24/7 Support', desc: 'Round-the-clock assistance from our dedicated travel experts.' },
   { title: '1000+ Destinations', desc: 'Flights to popular destinations across the US and worldwide.' },
   { title: 'Secure Payments', desc: 'All transactions are processed through verified payment providers.' },

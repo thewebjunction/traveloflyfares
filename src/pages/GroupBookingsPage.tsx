@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Users, CheckCircle, ChevronDown, Star } from 'lucide-react';
+import { Phone, Users, CheckCircle, ChevronDown } from 'lucide-react';
 
 const groupTypes = [
   {
@@ -111,27 +111,6 @@ const faqs = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Jennifer L.',
-    role: 'Event Coordinator',
-    text: 'Coordinated flights for 45 guests to our destination wedding in Cancun. Every detail was handled perfectly. I can\'t recommend them enough.',
-    stars: 5,
-  },
-  {
-    name: 'Marcus T.',
-    role: 'Corporate Travel Manager',
-    text: 'Our team of 30 travels quarterly. Since switching to Traveloflyfares for group bookings, the process has been seamless and we save on every trip.',
-    stars: 5,
-  },
-  {
-    name: 'Coach Daniel R.',
-    role: 'Athletic Director',
-    text: 'Handled our high school basketball team\'s flights across 3 tournaments this season. Always reliable, always coordinated.',
-    stars: 4,
-  },
-];
-
 export default function GroupBookingsPage() {
   const [openFaq, setOpenFaq] = useState(-1);
 
@@ -170,7 +149,7 @@ export default function GroupBookingsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { val: '10+', label: 'Minimum Group Size' },
-              { val: '500+', label: 'Airlines Searched' },
+              { val: '300+', label: 'Airlines Searched' },
               { val: '24/7', label: 'Group Support' },
               { val: '100%', label: 'Dedicated Specialist' },
             ].map((s) => (
@@ -244,26 +223,6 @@ export default function GroupBookingsPage() {
                   <h4 className="font-semibold text-sm mb-1" style={{ color: '#1F2937' }}>{a.title}</h4>
                   <p className="text-xs leading-relaxed" style={{ color: '#6B7280' }}>{a.desc}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20" style={{ backgroundColor: '#ffffff' }}>
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>What Group Organizers Say</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="p-6 rounded-xl" style={{ border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}>
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />)}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{t.role}</p>
               </div>
             ))}
           </div>

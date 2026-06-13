@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, Zap, CheckCircle, ChevronDown, Star, Clock } from 'lucide-react';
+import { Phone, Zap, CheckCircle, ChevronDown, Clock } from 'lucide-react';
 
 const scenarios = [
   {
@@ -109,27 +109,6 @@ const faqs = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Rachel M.',
-    role: 'Emergency traveler',
-    text: 'My father had a health crisis and I needed to fly cross-country in 3 hours. They found me a seat, handled the booking, and I made it in time. I will never forget that.',
-    stars: 5,
-  },
-  {
-    name: 'David K.',
-    role: 'Frequent business traveler',
-    text: 'I\'ve used them three times for same-day business travel. Every time they come through with options my company travel portal completely misses.',
-    stars: 5,
-  },
-  {
-    name: 'Priya S.',
-    role: 'Missed connection',
-    text: 'Stranded in Dallas at 11pm with a cancelled connection. Called, and within 20 minutes I had a new routing confirmed and was back on track.',
-    stars: 4,
-  },
-];
-
 export default function LastMinutePage() {
   const [openFaq, setOpenFaq] = useState(-1);
 
@@ -173,7 +152,7 @@ export default function LastMinutePage() {
             {[
               { val: '24/7', label: 'Urgent Booking Support' },
               { val: 'Same Day', label: 'Departures Available' },
-              { val: '500+', label: 'Airlines Searched' },
+              { val: '300+', label: 'Airlines Searched' },
               { val: 'Minutes', label: 'Booking Confirmation' },
             ].map((s) => (
               <div key={s.label}>
@@ -253,26 +232,6 @@ export default function LastMinutePage() {
                 <div className="text-4xl font-black mb-4" style={{ color: 'rgba(14,165,233,0.2)' }}>{tip.number}</div>
                 <h3 className="font-bold mb-2 text-sm" style={{ color: '#1F2937' }}>{tip.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{tip.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20" style={{ backgroundColor: '#ffffff' }}>
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>Travelers We've Helped at the Last Minute</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="p-6 rounded-xl" style={{ border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}>
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />)}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{t.role}</p>
               </div>
             ))}
           </div>

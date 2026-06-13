@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Phone, ArrowRight, ChevronDown, CheckCircle, Star } from 'lucide-react';
+import { Phone, ArrowRight, ChevronDown, CheckCircle } from 'lucide-react';
 
 const routes = [
   { from: 'New York (JFK)', to: 'Los Angeles (LAX)', price: 'From $149', duration: '~5h 30m' },
@@ -26,8 +26,8 @@ const airlines = ['Delta Air Lines', 'United Airlines', 'American Airlines', 'So
 
 const benefits = [
   {
-    title: 'Compare 500+ Airlines',
-    desc: 'We search fares across all major US carriers including Delta, United, American, Southwest, JetBlue, Alaska, Spirit, and Frontier — giving you the widest selection of domestic flight options.',
+    title: 'Compare Multiple Airlines',
+    desc: 'We search fares across all major US carriers including Delta, United, American, Southwest, JetBlue, Alaska, Spirit, and Frontier — giving you a wide selection of domestic flight options.',
   },
   {
     title: 'Best Price Guarantee',
@@ -78,24 +78,6 @@ const faqs = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Rachel M.',
-    text: 'Found me a great fare to Chicago with almost no wait. The agent was knowledgeable and had my ticket confirmed in under 10 minutes.',
-    stars: 5,
-  },
-  {
-    name: 'Tom B.',
-    text: 'I needed a last-minute flight from New York to Miami and the team found me a seat the same day. Highly recommend calling them directly.',
-    stars: 5,
-  },
-  {
-    name: 'Sandra K.',
-    text: 'Compared several airlines for my Dallas to Las Vegas trip and got a much better rate than what I found online. Very happy with the service.',
-    stars: 4,
-  },
-];
-
 export default function DomesticFlightsPage() {
   const [openFaq, setOpenFaq] = useState(-1);
 
@@ -133,8 +115,8 @@ export default function DomesticFlightsPage() {
         <div className="content-max max-w-[900px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { val: '500+', label: 'Airlines Searched' },
-              { val: '1,000+', label: 'US Destinations' },
+              { val: '300+', label: 'Airlines Searched' },
+              { val: '500+', label: 'US Destinations' },
               { val: '24/7', label: 'Expert Support' },
               { val: '100%', label: 'Secure Booking' },
             ].map((s) => (
@@ -175,9 +157,9 @@ export default function DomesticFlightsPage() {
               </a>
             ))}
           </div>
-          <p className="text-center text-xs mt-6" style={{ color: '#9CA3AF' }}>
-            * Prices shown are indicative and subject to availability. Call us for confirmed real-time fares.
-          </p>
+          <div className="mt-6 px-5 py-3 rounded-xl text-sm text-center" style={{ backgroundColor: 'rgba(14,165,233,0.08)', border: '1px solid rgba(14,165,233,0.2)', color: '#6B7280' }}>
+            <strong style={{ color: '#1F2937' }}>Note:</strong> Prices shown are indicative estimates only and are not guaranteed. Actual fares depend on availability, travel dates, and airline conditions. Call us for confirmed real-time pricing.
+          </div>
         </div>
       </div>
 
@@ -237,31 +219,6 @@ export default function DomesticFlightsPage() {
                   <h3 className="font-bold mb-2" style={{ color: '#1F2937' }}>{b.title}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{b.desc}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ── Testimonials ── */}
-      <div className="section-padding py-20">
-        <div className="content-max max-w-[900px] mx-auto">
-          <h2 className="text-2xl font-bold mb-3 text-center" style={{ color: '#1F2937' }}>What Our Customers Say</h2>
-          <div className="w-[60px] h-[3px] mx-auto mb-10" style={{ backgroundColor: '#0EA5E9' }} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="p-6 rounded-xl"
-                style={{ backgroundColor: '#ffffff', border: '1px solid rgba(14,165,233,0.12)', boxShadow: '0 2px 12px rgba(14,165,233,0.06)' }}
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map((s) => (
-                    <Star key={s} size={14} fill={s <= t.stars ? '#0EA5E9' : 'transparent'} style={{ color: '#0EA5E9' }} />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: '#6B7280' }}>"{t.text}"</p>
-                <p className="text-sm font-semibold" style={{ color: '#1F2937' }}>— {t.name}</p>
               </div>
             ))}
           </div>
