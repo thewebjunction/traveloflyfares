@@ -95,7 +95,7 @@ export default function DomesticFlightsPage() {
           </h1>
           <div className="w-[60px] h-[3px] mx-auto mb-6" style={{ backgroundColor: '#0EA5E9' }} />
           <p className="text-base md:text-lg mb-4" style={{ color: 'rgba(255,255,255,0.75)', maxWidth: 640, margin: '0 auto 24px' }}>
-            Fly to 1,000+ destinations across the United States. Compare domestic fares from all major US airlines and get the best deal on your next trip — with personalized expert assistance every step of the way.
+            Fly to destinations across the United States. Compare domestic fares from all major US airlines and get the best deal on your next trip — with personalized expert assistance every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
