@@ -20,6 +20,15 @@ import CancellationPolicyPage from './pages/CancellationPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import DisclaimerPage from './pages/DisclaimerPage';
 import AdvertisementDisclosurePage from './pages/AdvertisementDisclosurePage';
+import HowItWorksPage from './pages/HowItWorksPage';
+import FAQPage from './pages/FAQPage';
+import ContactPage from './pages/ContactPage';
+import DomesticFlightsPage from './pages/DomesticFlightsPage';
+import InternationalFlightsPage from './pages/InternationalFlightsPage';
+import GroupBookingsPage from './pages/GroupBookingsPage';
+import LastMinutePage from './pages/LastMinutePage';
+import BusinessClassPage from './pages/BusinessClassPage';
+import CharterFlightsPage from './pages/CharterFlightsPage';
 
 function HomePage() {
   useEffect(() => {
@@ -72,6 +81,15 @@ export default function App() {
           <Route path="/cookie-policy" element={<CookiePolicyPage />} />
           <Route path="/disclaimer" element={<DisclaimerPage />} />
           <Route path="/advertisement-disclosure" element={<AdvertisementDisclosurePage />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/domestic-flights" element={<DomesticFlightsPage />} />
+          <Route path="/international-flights" element={<InternationalFlightsPage />} />
+          <Route path="/group-bookings" element={<GroupBookingsPage />} />
+          <Route path="/last-minute" element={<LastMinutePage />} />
+          <Route path="/business-class" element={<BusinessClassPage />} />
+          <Route path="/charter-flights" element={<CharterFlightsPage />} />
         </Routes>
         <Footer />
       </div>

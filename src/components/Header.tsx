@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { Phone, Menu, X } from 'lucide-react';
 import logoImg from '../../images/logo 2.png';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const navLinks = [
-  { label: 'Flights', href: '#flights' },
-  { label: 'Hotels', href: '#hotels' },
-  { label: 'Vacations', href: '#vacations' },
-  { label: 'Car', href: '#car' },
-  { label: 'Bus', href: '#bus' },
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about' },
+  { label: 'How It Works', to: '/how-it-works' },
+  { label: 'FAQs', to: '/faq' },
+  { label: 'Cancellation', to: '/cancellation-policy' },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('#flights');
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -24,12 +24,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setActiveLink(href);
-    setMobileOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  useEffect(() => { setMobileOpen(false); }, [location.pathname]);
 
   return (
     <header
@@ -56,7 +51,7 @@ export default function Header() {
           <img src={logoImg} alt="Travelofly Fares" className="w-auto" style={{ height: '80px', filter: 'brightness(0)' }} />
         </Link>
 
-        {/* Desktop: centered dark pill nav */}
+        {/* Desktop: centered pill nav */}
         <nav
           className="hidden md:flex items-center gap-1 px-6 py-2 rounded-full"
           style={{
@@ -65,20 +60,22 @@ export default function Header() {
             boxShadow: '0 4px 24px rgba(14,165,233,0.12)',
           }}
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200"
-              style={{
-                color: activeLink === link.href ? '#1F2937' : '#6B7280',
-                backgroundColor: activeLink === link.href ? 'rgba(14,165,233,0.1)' : 'transparent',
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.to;
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200"
+                style={{
+                  color: isActive ? '#1F2937' : '#6B7280',
+                  backgroundColor: isActive ? 'rgba(14,165,233,0.1)' : 'transparent',
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right: phone icon + CTA */}
@@ -100,7 +97,7 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile: hamburger only */}
+        {/* Mobile: hamburger */}
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -113,26 +110,35 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown */}
       {mobileOpen && (
         <div
           className="md:hidden mt-3 mx-auto rounded-2xl overflow-hidden max-w-sm"
           style={{ backgroundColor: 'rgba(255,255,255,0.98)', backdropFilter: 'blur(16px)', boxShadow: '0 8px 24px rgba(14,165,233,0.12)' }}
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="flex items-center px-6 py-4 text-sm font-medium border-b transition-colors duration-200"
-              style={{
-                color: activeLink === link.href ? '#1F2937' : '#6B7280',
-                borderColor: 'rgba(14,165,233,0.1)',
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = location.pathname === link.to;
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="flex items-center px-6 py-4 text-sm font-medium border-b transition-colors duration-200"
+                style={{
+                  color: isActive ? '#1F2937' : '#6B7280',
+                  borderColor: 'rgba(14,165,233,0.1)',
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <a
+            href="tel:+18337010952"
+            className="flex items-center gap-2 px-6 py-4 text-sm font-semibold"
+            style={{ color: '#0EA5E9' }}
+          >
+            <Phone size={16} /> +1 (833) 701-0952
+          </a>
         </div>
       )}
     </header>

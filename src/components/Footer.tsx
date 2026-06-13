@@ -1,17 +1,40 @@
 import { Link } from 'react-router';
 import { Instagram, Facebook, Linkedin, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
-const quickLinks = ['Flights', 'Hotels', 'Vacations', 'Car Rentals', 'Bus', 'Blog'];
-const popularDeals = ['Flights to Vegas', 'Flights to Orlando', 'Flights to Chicago', 'Flights to Phoenix', 'Flights to Hawaii', 'Flights to Europe'];
-const flightsTo = ['Domestic Flights', 'International', 'Group Bookings', 'Last Minute', 'Business Class', 'Charter Flights'];
+const quickLinks = [
+  { label: 'Domestic Flights', to: '/domestic-flights' },
+  { label: 'International Flights', to: '/international-flights' },
+  { label: 'How It Works', to: '/how-it-works' },
+  { label: 'FAQs', to: '/faq' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Contact Us', to: '/contact' },
+];
+
+const popularDeals = [
+  { label: 'Flights to Las Vegas', href: 'tel:+18337010952' },
+  { label: 'Flights to Orlando', href: 'tel:+18337010952' },
+  { label: 'Flights to Chicago', href: 'tel:+18337010952' },
+  { label: 'Flights to Phoenix', href: 'tel:+18337010952' },
+  { label: 'Flights to Hawaii', href: 'tel:+18337010952' },
+  { label: 'Flights to Europe', href: 'tel:+18337010952' },
+];
+
+const flightsTo = [
+  { label: 'Domestic Flights', to: '/domestic-flights' },
+  { label: 'International', to: '/international-flights' },
+  { label: 'Group Bookings', to: '/group-bookings' },
+  { label: 'Last Minute', to: '/last-minute' },
+  { label: 'Business Class', to: '/business-class' },
+  { label: 'Charter Flights', to: '/charter-flights' },
+];
 
 const supportLinks = [
-  { label: 'Contact Us', href: null },
-  { label: 'Customer Support', href: null },
-  { label: 'About Us', href: '/about' },
-  { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Terms & Conditions', href: '/terms' },
-  { label: 'Cancellation Policy', href: '/cancellation-policy' },
+  { label: 'Contact Us', to: '/contact' },
+  { label: 'Customer Support', to: '/contact' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Privacy Policy', to: '/privacy-policy' },
+  { label: 'Terms & Conditions', to: '/terms' },
+  { label: 'Cancellation Policy', to: '/cancellation-policy' },
 ];
 
 export default function Footer() {
@@ -53,12 +76,12 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5">
                 {quickLinks.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
+                  <li key={link.label}>
+                    <Link to={link.to} className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
                       onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
-                      {link}
-                    </a>
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -69,11 +92,11 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5">
                 {popularDeals.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
+                  <li key={link.label}>
+                    <a href={link.href} className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
                       onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -85,12 +108,12 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5">
                 {flightsTo.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
+                  <li key={link.label}>
+                    <Link to={link.to} className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
                       onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
-                      {link}
-                    </a>
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -100,21 +123,13 @@ export default function Footer() {
                 Support
               </h4>
               <ul className="space-y-2.5">
-                {supportLinks.map(({ label, href }) => (
+                {supportLinks.map(({ label, to }) => (
                   <li key={label}>
-                    {href ? (
-                      <Link to={href} className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
-                        {label}
-                      </Link>
-                    ) : (
-                      <a href="#" className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
-                        {label}
-                      </a>
-                    )}
+                    <Link to={to} className="text-sm transition-colors duration-200" style={{ color: '#9CA3AF' }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}>
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -145,22 +160,20 @@ export default function Footer() {
               <span className="text-xs px-2 py-1 rounded" style={{ border: '1px solid rgba(255,255,255,0.15)', color: '#9CA3AF' }}>AMEX</span>
               <span className="text-xs px-2 py-1 rounded" style={{ border: '1px solid rgba(255,255,255,0.15)', color: '#9CA3AF' }}>DISC</span>
             </div>
-            <div className="flex items-center gap-4">
-              <Link to="/disclaimer" className="text-xs transition-colors duration-200" style={{ color: '#6B7280' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}>
-                Disclaimer
-              </Link>
-              <Link to="/privacy-policy" className="text-xs transition-colors duration-200" style={{ color: '#6B7280' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}>
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-xs transition-colors duration-200" style={{ color: '#6B7280' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}>
-                Terms
-              </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              {[
+                { label: 'Disclaimer', to: '/disclaimer' },
+                { label: 'Privacy Policy', to: '/privacy-policy' },
+                { label: 'Terms', to: '/terms' },
+                { label: 'Cookie Policy', to: '/cookie-policy' },
+                { label: 'Ad Disclosure', to: '/advertisement-disclosure' },
+              ].map(({ label, to }) => (
+                <Link key={to} to={to} className="text-xs transition-colors duration-200" style={{ color: '#6B7280' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#F9FAFB')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}>
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
